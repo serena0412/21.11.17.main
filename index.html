@@ -87,16 +87,10 @@
 
 
 <script type="text/javascript">
-	let sidebar = document.querySelector(".sidebar");
-
-let top = localStorage.getItem("sidebar-scroll");
-if (top !== null) {
-  sidebar.scrollTop = parseInt(top, 10);
+function getYPosition(){
+  var top  = window.pageYOffset || document.documentElement.scrollTop
+  return top;
 }
-
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem("sidebar-scroll", sidebar.scrollTop);
-});
 </script>
 
 
